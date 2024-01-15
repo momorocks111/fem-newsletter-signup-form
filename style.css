@@ -1,0 +1,374 @@
+:root {
+  --Tomato-clr: hsl(4, 100%, 67%);
+  --Tomato-Error-clr: #ffe6e6;
+  --Dark-Slate-Grey-clr: hsl(234, 29%, 20%);
+  --Charcoal-Grey-clr: hsl(235, 18%, 26%);
+  --Grey-clr: hsl(231, 7%, 60%);
+  --White-clr: hsl(0, 0%, 100%);
+  --Linear-Gradient-Clr: linear-gradient(to right, #ff5379, #ff693c);
+
+  /* Typography */
+  --only-font: "Roboto", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--only-font);
+}
+
+li {
+  list-style: none;
+}
+
+/*=============================================
+=================== IMAGE =====================
+===============================================*/
+.mobile-img {
+  display: block;
+}
+
+.desktop-img {
+  display: none;
+}
+
+@media screen and (min-width: 728px) {
+  .mobile-img {
+    display: none;
+  }
+
+  .desktop-img {
+    display: block;
+    max-width: 400px;
+    max-height: 590px;
+  }
+}
+
+/*=============================================
+=================== MAIN ======================
+===============================================*/
+.main {
+  width: 100%;
+  margin-block-end: 4rem;
+}
+
+.form-wrapper {
+  max-width: 930px;
+  max-height: 642px;
+}
+
+.img-holder {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mobile-img {
+  width: 100%;
+}
+
+.form-content {
+  margin-inline: 1.5rem;
+  background-color: var(--White-clr);
+  margin-block-start: 2.75rem;
+}
+
+.web-title {
+  font-size: 36px;
+  color: var(--Dark-Slate-Grey-clr);
+}
+
+.form-subtitle {
+  margin-block-start: 1.5rem;
+  color: var(--Dark-Slate-Grey-clr);
+}
+
+.benefits-list {
+  margin-block-start: 1.625rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.benefit-img {
+  width: 23px;
+  height: 23px;
+}
+
+.benefit-item {
+  display: flex;
+  column-gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.signup-form {
+  margin-block-start: 2.625rem;
+}
+
+.form-texts {
+  display: flex;
+  justify-content: space-between;
+  margin-block-end: 0.75rem;
+}
+
+.form-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Dark-Slate-Grey-clr);
+}
+
+.email-error {
+  color: var(--Tomato-clr);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.get-email {
+  width: 100%;
+  border: 1px solid var(--Grey-clr);
+  padding: 1.375rem;
+  border-radius: 10px;
+}
+
+.get-email.error {
+  border: 1px solid var(--Tomato-clr);
+  background-color: var(--Tomato-Error-clr);
+}
+
+.submit-btn,
+.success-btn {
+  width: 100%;
+  border: none;
+  background-color: var(--Dark-Slate-Grey-clr);
+  color: var(--White-clr);
+  margin-block-start: 1.5rem;
+  font-weight: 700;
+  padding-block: 1.375rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.success-btn:hover {
+  background-image: var(--Linear-Gradient-Clr);
+}
+
+/*=============================================
+================= TEMPLATE ====================
+===============================================*/
+.success-container {
+  margin-inline: 1.5rem;
+  margin-block-start: 9.375rem;
+  max-width: 440px;
+}
+
+.check-img {
+  height: 65px;
+  width: 65px;
+}
+
+.success-title {
+  margin-block-start: 2.625rem;
+  font-size: 34px;
+  color: var(--Dark-Slate-Grey-clr);
+}
+
+.success-text {
+  margin-block-start: 2rem;
+  font-size: 15px;
+  color: var(--Dark-Slate-Grey-clr);
+}
+
+.success-btn {
+  margin-block-start: 16.875rem;
+  margin-block-end: 2.5rem;
+}
+
+/*=============================================
+=================== FOOTER ====================
+===============================================*/
+.forced {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*=============================================
+================ BREAKPOINTS ==================
+===============================================*/
+@media screen and (min-width: 520px) {
+  .form-content {
+    margin-inline: 2.5rem;
+  }
+  .web-title,
+  .success-title {
+    font-size: 40px;
+  }
+  .form-subtitle,
+  .success-text,
+  .form-title,
+  .email-error,
+  .get-email,
+  .submit-btn,
+  .success-btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 728px) {
+  body {
+    background-color: var(--Dark-Slate-Grey-clr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .main {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-section,
+  .form-wrapper {
+    max-width: 906px;
+    max-height: 616px;
+  }
+  .form-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: var(--White-clr);
+    border-radius: 25px;
+    padding: 1.5rem;
+    column-gap: 4rem;
+  }
+  .img-holder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-self: center;
+  }
+  .desktop-img {
+    width: 100%;
+    height: 100%;
+  }
+  .web-title,
+  .success-title {
+    font-size: 30px;
+  }
+  .form-subtitle,
+  .success-text,
+  .form-title {
+    font-size: 16px;
+  }
+  .email-error,
+  .get-email {
+    font-size: 13px;
+  }
+  .submit-btn,
+  .success-btn {
+    font-size: 12px;
+  }
+  .signup-benefit {
+    font-size: 14px;
+  }
+  .success-container {
+    width: 67%;
+    background-color: var(--White-clr);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 3rem;
+  }
+  .success-container,
+  .success-btn,
+  .success-title,
+  .success-text {
+    margin-block-start: 0;
+  }
+  .success-title {
+    font-size: 40px;
+  }
+  .success-btn {
+    margin-block-end: 0;
+    font-size: 14px;
+  }
+  .main {
+    margin-block-end: 0;
+  }
+  .form-content {
+    margin-inline: 0rem;
+  }
+  .attribution {
+    color: rgb(239, 92, 92);
+  }
+  .attribution a {
+    color: var(--White-clr);
+  }
+}
+
+@media screen and (min-width: 816px) {
+  .form-content {
+    padding-inline: 2rem;
+    max-width: 359px;
+    width: 110%;
+  }
+}
+
+@media screen and (min-width: 816px) {
+  .form-content {
+    padding-inline: 2rem;
+    max-width: 359px;
+    width: 130%;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .form-content {
+    padding-inline: 2rem;
+    max-width: 359px;
+    width: 140%;
+  }
+  .web-title,
+  .success-title {
+    font-size: 36px;
+  }
+  .benefit-item {
+    column-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .form-content {
+    width: 200%;
+  }
+  .web-title,
+  .success-title {
+    font-size: 46px;
+  }
+  .form-subtitle,
+  .signup-benefit {
+    font-size: 13px;
+  }
+  .form-title,
+  .email-error {
+    font-size: 12px;
+  }
+  .get-email,
+  .submit-btn {
+    font-size: 15px;
+  }
+}

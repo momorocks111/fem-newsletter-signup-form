@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Sign-up form start -->
+    <main class="main" data-main-content>
+      <section class="signup-section">
+        <div class="form-wrapper">
+          <div class="img-holder">
+            <img
+              src="assets/images/illustration-sign-up-mobile.svg"
+              alt="Mobile"
+              class="mobile-img"
+            />
+            <img
+              src="assets/images/illustration-sign-up-desktop.svg"
+              alt="Desktop"
+              class="desktop-img"
+            />
+          </div>
+          <div class="form-content">
+            <h1 class="web-title">Stay updated!</h1>
+            <p class="form-subtitle">
+              Join 60,000+ product managers receiving monthly updates on:
+            </p>
+
+            <ul class="benefits-list">
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-list.svg"
+                  alt="Check"
+                  class="benefit-img"
+                />
+                <p class="signup-benefit">
+                  Product discovery and building what matters
+                </p>
+              </li>
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-list.svg"
+                  alt="Check"
+                  class="benefit-img"
+                />
+                <p class="signup-benefit">
+                  Measuring to ensure updates are a success
+                </p>
+              </li>
+
+              <li class="benefit-item">
+                <img
+                  src="assets/images/icon-list.svg"
+                  alt="Check"
+                  class="benefit-img"
+                />
+                <p class="signup-benefit">And much more!</p>
+              </li>
+            </ul>
+
+            <form class="signup-form">
+              <div class="form-texts">
+                <p class="form-title">Email address</p>
+                <p class="email-error" data-form-error></p>
+              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="email@company.com"
+                id="email"
+                class="get-email"
+                data-email-input
+              />
+              <button type="submit" class="submit-btn" data-submit-btn>
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+
+    <template class="success-template" data-success-template>
+      <div class="success-container">
+        <img src="assets/images/icon-list.svg" alt="Check" class="check-img" />
+        <h1 class="success-title">Thanks for subscribing!</h1>
+        <p class="success-text" data-success-message>
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+
+        <button class="success-btn" onclick="goBack()" data-success-btn>
+          Dismiss message
+        </button>
+      </div>
+    </template>
+
+    <!-- Success message end -->
+
+    <footer class="forced">
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Muhammad Desai</a>.
+      </div>
+    </footer>
+  </body>
+</html>
